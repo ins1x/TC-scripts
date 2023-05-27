@@ -1,0 +1,62 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WincmdConnected]
+@="FTP-соединение установлено"
+
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WincmdCopyComplete]
+@="Копирование/перемещение завершено"
+
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WincmdDeleteComplete]
+@="Удаление завершено"
+
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WincmdPackComplete]
+@="Упаковка завершена"
+
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WincmdSearchComplete]
+@="Поиск завершён"
+
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WincmdTransferComplete]
+@="Передача завершена"
+
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WincmdUnpackComplete]
+@="Распаковка завершена"
+
+
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd]
+@="Total Commander"
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdConnected]
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdConnected\.current]
+@="TC Connected To FTP.wav"
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdCopyComplete]
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdCopyComplete\.current]
+@="TC Operation Complete.wav"
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdDeleteComplete]
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdDeleteComplete\.current]
+@="TC Delete Complete.wav"
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdPackComplete]
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdPackComplete\.current]
+@="TC Pack Complete.wav"
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdSearchComplete]
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdSearchComplete\.current]
+@="TC Search Complete.wav"
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdTransferComplete]
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdTransferComplete\.current]
+@="TC Transfer Complete.wav"
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdUnpackComplete]
+
+[HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Wincmd\WincmdUnpackComplete\.current]
+@="TC Unpack Complete.wav"

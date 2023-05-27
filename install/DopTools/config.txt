@@ -1,0 +1,18 @@
+﻿;!@Install@!UTF-8!
+BeginPrompt="Будут установлены дополнительные системные программы и библиотеки в системную директорию.\nДля тихой установки запустите этот архив с ключами (-ai -gm2)\n\n • nircmd\n • curl \n • cmdow\n • pathman, srwinstw (WindowsResourseKitTools)\n • sed, wget (GNUunixTools_win32)\n • ngrep \n • pstools (sysinternals) \n • setenv \n • 7z + lib's\n • devcon\n • sqlite3 lib's \n\nПродолжить?"
+Title="Win XP/Vista/7(32/64) %%M"
+ExtractTitle="Установка ..."
+GUIFlags="2048"
+GUIMode="1"
+RunProgram="hidcon:cmd /c setup.cmd"
+AutoInstall="hidcon:cmd /c setup.cmd"
+;Резервный код распаковки
+;AutoInstall="x86:hidcon:cmd /c copy /Y x32/*.exe %SystemRoot%/System32/"
+;AutoInstall="x86:hidcon:cmd /c copy /Y x32/*.dll %SystemRoot%/System32/"
+;AutoInstall="x64:hidcon:cmd /c copy /Y x32/*.exe %SystemRoot%/SysWOW64/"
+;AutoInstall="x64:hidcon:cmd /c copy /Y x32/*.dll %SystemRoot%/SysWOW64/"
+;AutoInstall="x64:hidcon:cmd /c copy /Y x64/*.exe %SystemRoot%/System32/"
+;AutoInstall="x64:hidcon:cmd /c copy /Y x64/*.dll %SystemRoot%/System32/"
+FinishMessage="Установка завершена"
+;!@RunProgramEnd@!
+;!@InstallEnd@!

@@ -1,0 +1,28 @@
+﻿;!@Install@!UTF-8!
+Title="TotalCommander_ins[pack]_32/64[upd16] 07.04.2015"
+BeginPrompt="Сборка ориентирована на русскоязычный сегмент опытных пользователей и предоставляется как есть.\nПри запуске этого SFX архива без ключей будет предложена портативная утановка \nTotal Commander (TC) без интеграции в систему.При запуске этого же SFX архива с ключами (цифра - ключ),\nбудут установлены:\n\t1  TC с выводом ярлыков\n\t2  TC с аудиопаком и доп утилитами\n\t3  кодеки и runtime библиотеки\n\nНовые программы и компоненты сборки:\n• Active@ driver installer v1.0 - Утилита для установки драйвера из inf\n• AutoDisplay 1.3.2 - Автоматически выставляет оптимальное разрешение экрана\n\nНастройки, исправления, удаленные компоненты сборки:\n• Удалены Victoria, AS SSD Benchmark Rus PE, GetWindowText, IsMyLCDok, OgreGUI.\n• Удалены справочники по VBA, PERL, PHP, SED\n• Добавлены примеры меню конфигураций для GRUB4DOS\n• На пользовательскую панель добавлены кнопки подсчета CRC, создания ярлыка, просмотра в 7z (встроенного)\n• Добавлен скрипт для бэкапа настроек TC и очистки временных файлов TC (в меню Запуск)\n• HAL сжат и перепакован в portable версию\n• В Multiboot добавлена папка с ссылками на популярные сборки Windows, LiveCD, RecoveryDisks\n• Добавлен список паблик FTP серверов(wcx_ftp.ini)\n• Исправления в скрипте создания ярлыков для TC, ярлыки теперь выводятся для всех пользователей\n• Новый установщик с возможностью выбора режима установки (запустите архив с ключем -help).\n\nОбновления:\n• WinNTsetup обновлен до версии 3.7.5\n• K-Lite_Codec_Pack обновлен до версии 11\n• TorBrowser обновлен до версии 4.0.5\n\nДля тихой установки запустите этот архив с ключами (-ai -gm2)"
+; SetEnvironment="TC=%ProgramFiles%\\TotalCmd" - не используется из-за бага с определением на x64
+SetEnvironment="TC=C:\\Program Files\\TotalCmd"
+InstallPath="%TC%"
+; Очистка следов старой версии и установка новой с выводом ярлыков
+AutoInstall1="hidcon:cmd /c start /w wscript.exe \"Plugins\\TC utilits\\CreateTCLinks.vbs\" "
+; Полная установка с аудиопаком и доп утилитами
+AutoInstall2="hidcon:cmd /c Install\\DopTools.exe -ai -gm2"
+AutoInstall2="hidcon:cmd /c \"Plugins\\TC utilits\\Audiopack\\Audiopack.exe -ai -gm2\" "
+; Установить кодеки и runtime библиотеки
+AutoInstall3="hidcon:cmd /c Install\\K-Lite_Codec_Pack.exe /VERYSILENT"
+AutoInstall3="hidcon:cmd /c Install\\RuntimePack_Lite_x86_x64.exe -y -gm2 -fm0"
+; Очистка и распаковка в указанную папку
+AutoInstall="hidcon:cmd /c taskkill /IM Totalcmd.exe* /F"
+AutoInstall="hidcon:cmd /c rmdir %TС% /s /q"
+AutoInstall="hidcon:cmd /c regedit /s \"Plugins\\TC utilits\\Delete_TC_lic_info.reg\" "
+AutoInstall="%TC%"
+CancelPrompt="Вы хотите прервать распаковку?"
+ExtractDialogText="Подождите, пожалуйста..."
+ExtractPathText="Пожалуйста, введите путь распаковки:"
+ExtractTitle="Распаковка..."
+GUIFlags="8+32+64+256+4096"
+GUIMode="1"
+HelpText="При запуске этого SFX архива без ключей будет предложена портативная утановка \nTotal Commander (TC) без интеграции в систему.\n\nПри запуске этого же SFX архива с ключами (цифра - ключ),\nбудут установлены:\n\t1  TC с выводом ярлыков\n\t2  TC с аудиопаком и доп утилитами\n\t3  кодеки и runtime библиотеки\n\nЕсли запустить SFX архив с ключом:\n•  '-ai123' - Вы получите \"полный\" TC\n\n\nВыберите нужный Вам набор ключей."
+OverwriteMode="2"
+;!@InstallEnd@!

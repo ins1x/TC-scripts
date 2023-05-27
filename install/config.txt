@@ -1,0 +1,32 @@
+﻿;!@Install@!UTF-8!
+Title="TotalCommander_ins[pack]_32/64[upd17] 07.05.2015"
+BeginPrompt="Total Commander — файловый менеджер с закрытым исходным кодом, продолжает добрую традицию двухпанельных файловых менеджеров\nно отличается повышенным удобством и функциональностью, поддерживает плагины, имеет множество встроенных полезных инструментов.\nСборка ориентирована на русскоязычный сегмент опытных пользователей и предоставляется как есть.\nПри запуске этого SFX архива без ключей будет предложена портативная утановка \nTotal Commander (TC) без интеграции в систему.При запуске этого же SFX архива с ключами (цифра - ключ),\nбудут установлены:\n\t2  TC с выводом ярлыков\n\t3  TC с аудиопаком и доп утилитами\n\t4  кодеки и runtime библиотеки\n\nДля тихой установки запустите этот архив с ключами (-ai -gm2)\n\nДополнительная информация на сайте inssixteen.ru.tf"
+; SetEnvironment="TC=%ProgramFiles%\\TotalCmd" - не используется из-за бага с определением на x64
+SetEnvironment="TC=C:\\Program Files\\TotalCmd"
+InstallPath="%TC%"
+; Простая распаковка (не использовать без доп ключей)
+AutoInstall1="%TC%"
+; Вывод ярлыков
+AutoInstall2="hidcon:cmd /c start /w wscript.exe \"Plugins\\TC utilits\\CreateTCLinks.vbs\" "
+; Полная установка с аудиопаком и доп утилитами
+AutoInstall3="hidcon:cmd /c Install\\DopTools.exe -ai -gm2"
+AutoInstall3="hidcon:cmd /c \"Plugins\\TC utilits\\Audiopack\\Audiopack.exe -ai -gm2\" "
+; Установить кодеки и runtime библиотеки
+AutoInstall4="hidcon:cmd /c Install\\K-Lite_Codec_Pack.exe /VERYSILENT"
+AutoInstall4="hidcon:cmd /c Install\\RuntimePack_Lite_x86_x64.exe -y -gm2 -fm0"
+; Команды ниже будут исполнены автоматически при любым вызове -ai
+; Закрывает открытые окна TC для всех платформ
+AutoInstall="hidcon:cmd /c taskkill /IM Totalcmd.exe* /F"
+; AutoInstall="hidcon:cmd /c rmdir %TС% /s /q" - не используется для предотвращения потреи данных
+; Запуск твика очистки информации о предыдущих версиях TC из реестра
+AutoInstall="hidcon:cmd /c regedit /s \"Plugins\\TC utilits\\Delete_TC_lic_info.reg\" "
+; END autoinstall
+CancelPrompt="Вы хотите прервать распаковку?"
+ExtractDialogText="Подождите, пожалуйста..."
+ExtractPathText="Пожалуйста, введите путь распаковки:"
+ExtractTitle="Распаковка..."
+GUIFlags="8+32+64+256+4096"
+GUIMode="1"
+HelpText="При запуске этого SFX архива без ключей будет предложена портативная утановка \nTotal Commander (TC) без интеграции в систему.\n\nПри запуске этого же SFX архива с ключами (цифра - ключ),\nбудут установлены:\n\t2  TC с выводом ярлыков\n\t3  TC с аудиопаком и доп утилитами\n\t4  кодеки и runtime библиотеки\n\nЕсли запустить SFX архив с ключом:\n•  '-ai123' - Вы получите \"полный\" TC\n\n\nВыберите нужный Вам набор ключей."
+OverwriteMode="2"
+;!@InstallEnd@!

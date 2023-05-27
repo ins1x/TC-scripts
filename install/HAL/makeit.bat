@@ -1,0 +1,1 @@
+COPY /b 7ZSD.sfx + config.txt + HAL.7z HAL.exe

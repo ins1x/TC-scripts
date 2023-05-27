@@ -1,0 +1,1 @@
+COPY /b "7zsd.sfx" + "config.txt" + "DopTools.7z" "DopTools.exe"

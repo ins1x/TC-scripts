@@ -1,0 +1,6 @@
+;!@Install@!UTF-8!
+InstallPath="%TEMP%\\HAL"
+RunProgram="%TEMP%\\HAL\\HAL.exe"
+RunProgram="hidcon:unistall.cmd"
+GUIMode="2"
+;!@InstallEnd@!

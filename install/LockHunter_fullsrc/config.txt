@@ -1,0 +1,6 @@
+;!@Install@!UTF-8!
+InstallPath="%TEMP%\\LockHunter"
+RunProgram="%TEMP%\\LockHunter\\LockHunterPortable.exe"
+RunProgram="hidcon:unistall.cmd"
+GUIMode="2"
+;!@InstallEnd@!

@@ -1,0 +1,54 @@
+;!@Install@!UTF-8!
+Title="Установка Total Commander 7pb3"
+BeginPrompt="Сейчас будет установлен Total Commander\nс английским интерфейсом (trial версия).\n\nО других вариантах установки Вы можете\nузнать, нажав \"Отмена\" и запустив снова\nэтот SFX архив с ключом '-?' или '-h'"
+; Путь установки TC
+SetEnvironment="PathTC=%ProgramFiles%\\TOOLS\\Total Commander"
+SetEnvironment="Var1=%PathTC%\\"
+SetEnvironment="Var2=\"%PathTC%\""
+; Удаление ключей предыдущей установки TC
+SetEnvironment="DelKey1=hidcon:cmd /c reg delete \"hkcu\\Software\\Ghisler\" /f"
+SetEnvironment="DelKey2=hidcon:cmd /c reg delete \"hklm\\Software\\Ghisler\" /f"
+; Установка "чистого" TC
+RunProgram="%DelKey1%"
+RunProgram="%DelKey2%"
+RunProgram="fm20:tcmd7pb3_E.exe"
+AutoInstall1="%DelKey1%"
+AutoInstall1="%DelKey2%"
+AutoInstall1="fm20:tcmd7pb3_E.exe"
+; Русификация
+AutoInstall2="hidcon:cmd /c xcopy Language \"%Var1%Language\" /s /e /i /y"
+AutoInstall2="hidcon:cmd /c copy !ReadMe_Rus.txt %Var2%"
+AutoInstall2="hidcon:cmd /c copy Hist_rus.txt %Var2%"
+AutoInstall2="hidcon:cmd /c copy Keyb_rus.txt %Var2%"
+; Индивидуальные настройки
+AutoInstall3="hidcon:cmd /c copy Default.bar %Var2%"
+AutoInstall3="hidcon:cmd /c copy default.br2 %Var2%"
+AutoInstall3="hidcon:cmd /c copy wcx_ftp.ini %Var2%"
+AutoInstall3="hidcon:cmd /c copy wincmd.ini %Var2%"
+; Лицензионный ключ
+AutoInstall4="hidcon:cmd /c copy wincmd.key %Var2%"
+; Поддержка шифрования
+AutoInstall5="hidcon:cmd /c copy wcmzip32.dll %Var2%"
+; Плагины и утилиты
+AutoInstall6="hidcon:cmd /c xcopy Info \"%Var1%Info\" /s /e /i /y"
+AutoInstall6="hidcon:cmd /c xcopy Plugins \"%Var1%Plugins\" /s /e /i /y"
+AutoInstall6="hidcon:cmd /c xcopy Utilites \"%Var1%Utilites\" /s /e /i /y"
+; Просмотровщик графических и медиа файлов
+AutoInstall7="hidcon:cmd /c xcopy IrfanView \"%Var1%IrfanView\" /s /e /i /y"
+; Автозапуск TC при подключении флешки
+AutoInstall8="hidcon:cmd /c \"regedit -s ForAutoplayTC.reg\""
+; Полная установка TC
+AutoInstall="%DelKey1%"
+AutoInstall="%DelKey2%"
+AutoInstall="fm20:tcmd7pb3_E.exe"
+AutoInstall="hidcon:cmd /c \"del tcmd7pb3_E.exe /q\""
+AutoInstall="hidcon:cmd /c xcopy %%T %Var2% /s /e /i /y"
+AutoInstall="hidcon:cmd /c \"regedit -s ForAutoplayTC.reg\""
+GUIFlags="2+4+8+16+32+2048+4096"
+GUIMode="1"
+ExtractTitle="Распаковка файлов..."
+ExtractDialogText="Подождите, уже почти все готово."
+Shortcut="26,{%Var1%TOTALCMD.EXE},{},{Microsoft\\Internet Explorer\\Quick Launch},{Менеджер файлов},{Total Commander}"
+HelpText="При запуске этого SFX архива без ключей будет установлен\nTotal Commander (TC) с английским интерфейсом (trial версия).\n\nПри запуске этого же SFX архива с ключами (цифра - ключ),\nбудут установлены:\n\t1  Сам Total Commander (ключ ОБЯЗАТЕЛЬНЫЙ)\n\t2  Файлы русификации\n\t3  Файлы настроек\n\t4  Файл регистрации (помните об авторских правах)\n\t5  ZIP-dll с возможностью шифрования\n\t6  Плагины\n\t7  Просмотровщик IrfanView\n\t8  Автозапуск TC при подключении флешки\n\nЕсли запустить SFX архив с ключом:\n•  '-ai12345678' - Вы получите \"полный\" TC\n•  '-ai1245' - Вам не будет \"навязан\" стиль создателя архива\n•  '-ai125' - Вы получите TC с русским интерфейсом,\nно trial версию, зато совесть ваша будет чиста ;)\n\nВыберите нужный Вам набор ключей."
+FinishMessage="Total Commander 7pb3 установлен.\n\nДля запуска ТС щелкните его значок\nна панели быстрого запуска."
+;!@InstallEnd@!

@@ -1,0 +1,1 @@
+COPY /b 7ZSD.sfx + config.txt + TotalCmd.7z TotalCmd_[upd17].exe

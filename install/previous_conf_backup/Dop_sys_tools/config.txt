@@ -1,0 +1,15 @@
+﻿;!@Install@!UTF-8!
+BeginPrompt="Будут установлены дополнительные системные программы и библиотеки в системную директорию. \n • nircmd \n • nix tools(sed,ngrep,wget) \n • sqlite lib \n • pstools \n • 7za \n • Devcon \n Продолжить?"
+Title="%%M"
+ExtractTitle="Установка ..."
+RunProgram="hidcon:cmd /c setup.cmd"
+; Резервный код распаковки
+AutoInstall="x86:hidcon:cmd /c copy /Y x32/*.exe %SystemRoot%/System32/"
+AutoInstall="x86:hidcon:cmd /c copy /Y x32/*.dll %SystemRoot%/System32/"
+AutoInstall="x64:hidcon:cmd /c copy /Y x32/*.exe %SystemRoot%/SysWOW64/"
+AutoInstall="x64:hidcon:cmd /c copy /Y x32/*.dll %SystemRoot%/SysWOW64/"
+AutoInstall="x64:hidcon:cmd /c copy /Y x64/*.exe %SystemRoot%/System32/"
+AutoInstall="x64:hidcon:cmd /c copy /Y x64/*.dll %SystemRoot%/System32/"
+FinishMessage="Установка завершена"
+;!@RunProgramEnd@!
+;!@InstallEnd@!

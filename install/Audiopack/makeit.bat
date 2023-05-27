@@ -1,0 +1,1 @@
+COPY /b "7zsd.sfx" + "config.txt" + "Audiopack.7z" "Audiopack.exe"

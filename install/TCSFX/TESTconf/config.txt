@@ -1,0 +1,13 @@
+;!@Install@!UTF-8!
+Title="Total_Commander(ins pack)_x86-x64 [upd12a]"
+BeginPrompt="Архив содержит сборку Total Commander для опытных пользователей:\n\n• Версия от 20.11.2014."
+CancelPrompt="Вы хотите прервать распаковку?"
+ExtractDialogText="Подождите, пожалуйста..."
+ExtractPathText="Пожалуйста, введите путь распаковки:"
+ExtractTitle="Распаковка..."
+GUIFlags="8+32+64+256+4096"
+GUIMode="1"
+InstallPath="%ProgramFiles%\\TESTTotalCmd"
+OverwriteMode="2"
+Shortcut="Du,{%%T\\TOTALCMD.exe},{},{},{TotalCmd by ins},{TotalCmd},{},{%%T\\TOTALCMD.exe},{0}"
+;!@InstallEnd@!

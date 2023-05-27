@@ -1,0 +1,12 @@
+﻿;!@Install@!UTF-8!
+BeginPrompt="Звуковая схема (Half-Life 2)\n\nНабор звуков воспроизводимых TotalCommander’ом при завершении длительных операций копирования, перемещения, удаления и др.\nНапример, по завершении операции копирования/перемещения, компьютер «скажет»: «Готово».\nРекомендуется включить опцию в TotalCommander’е для воспроизведения звуков только при длительных операциях\n(Конфигурация – Настройка – Общие – При операциях, длящихся более 10 с). Иначе лишняя болтовня быстро надоест.\nДля тихой установки запустите этот архив с ключами (-ai -gm2)\n\nУстановить? "
+Title="Audiopack for TC 8 Half-life theme"
+ExtractTitle="Установка ..."
+GUIFlags="2048"
+GUIMode="1"
+InstallPath="%windir%\\MEDIA\\"
+Install="hidcon:cmd /c \"regedit -s RegisterSounds.reg\""
+AutoInstall="hidcon:cmd /c copy /Y *.wav %windir%\\MEDIA\\"
+AutoInstall="hidcon:cmd /c \"regedit -s RegisterSounds.reg\""
+FinishMessage="Распаковка звуковой темы Half-life завершена :)"
+;!@InstallEnd@!

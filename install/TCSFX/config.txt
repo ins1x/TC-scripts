@@ -1,0 +1,14 @@
+;!@Install@!UTF-8!
+Title="TotalCommander_ins[pack]_32/64[upd15] 07.03.2015 inssixteen.ru.tf"
+BeginPrompt="Архив содержит сборку Total Commander для опытных пользователей.\n\nНовые программы и компоненты сборки:\n• uTox - Клиент анонимной переписки (Webinst)\n• SUMo 3.13 - Проверка обновлений для программ\n• PuTTY 0.63-RU-15 - Клиент для удаленного доступа (сборка от PUTTY.ORG.RU)\n• HAL - Расширеный поиск по торрент трекерам (webinst)\n• OpenHardwareMonitor 0.7.1b - Мониторинг датчиков температуры\n• Dr.Web 6 Portable Scanner by HA3APET v10 - Портативная сборка DRWeb\n• Rufus 1.4.12 - Утилита для создания мультизагрузочных устройств\n• EasyUha 1.1 - GUI для архиватора Uha\n• OSFMount 1.5.10 - Создание RAM дисков из образов\n• WindowsGate 1.2 - Обход проверки пароля учетной записи на гостевой системе (LiveCD)\n• BIOS-MasterPG - Сборник утилит для рассчёта пароля BiOS ноутбуков.\n• Добавлен справочник по BIOS\n\nНастройки, исправления, удаленные компоненты сборки:\n• FileHippo Update checker заменен на SUMo\n• Изменена пользовательская панель\n• MouseRecorder заменен на MouseEmu\n• HPUSBDiskStorageFormatTool заменен на Rufus, перемещен в папку Tweaks/dev\n• Изменения в меню Запуск > Администирирование > Защита от вирусов\n• Управление звуковой темой перенесено в меню Запуск > TotalCmd\n• Аудиопак перенесен в папку плагинов TC\n• Printflush перепакован BtE\n• Удален вебустановщик Mozilla Firefox\n• Удалены iso конвертеры из /arc\n• К Flashnul дополнен GUI\n\nОбновления:\n• AmmyAdmin обновлен до версии 3.5\n• Auto_PowerOFF обновлен до версии 5.10\n• TrashReg обновлен до версии 3.9.3\n\nДля тихой установки запустите этот архив с ключами (-ai -gm2)"
+CancelPrompt="Вы хотите прервать распаковку?"
+ExtractDialogText="Подождите, пожалуйста..."
+ExtractPathText="Пожалуйста, введите путь распаковки:"
+ExtractTitle="Распаковка..."
+GUIFlags="8+32+64+256+4096"
+GUIMode="1"
+InstallPath="%ProgramFiles%\\TotalCmd"
+AutoInstall="%ProgramFiles%\\TotalCmd"
+OverwriteMode="2"
+Shortcut="Du,{%%T\\TotalCmd.exe},{},{},{TotalCmd by ins},{TotalCmd},{},{%%T\\TotalCmd.exe},{0}"
+;!@InstallEnd@!

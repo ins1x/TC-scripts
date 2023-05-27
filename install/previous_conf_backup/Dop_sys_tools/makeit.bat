@@ -1,0 +1,1 @@
+COPY /b "7zsd.sfx" + "config.txt" + "Dop_sys_tools_(ins_pack).7z" "Dop_sys_tools_(ins_pack).exe"
