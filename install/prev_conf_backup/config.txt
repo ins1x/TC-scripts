@@ -1,6 +1,0 @@
-﻿;!@Install@!UTF-8!
-InstallPath="%windir%\\MEDIA\\"
-Install="hidcon:cmd /c \"regedit -s RegisterSounds.reg\""
-GUIMode="2"
-FinishMessage="Распаковка звуковой темы Half-life завершена :)"
-;!@InstallEnd@!
