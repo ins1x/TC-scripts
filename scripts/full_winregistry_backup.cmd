@@ -1,1 +1,0 @@
-cmd.exe /C regedit /e "%CD%\RegBackup.reg"
